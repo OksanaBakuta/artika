@@ -1,0 +1,53 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  @extend %quicksand-500;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.container{
+  max-width: 1800px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-small{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.user-btn{
+  background-color: $bglink;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  cursor: pointer;
+  &:hover{
+    background-color: $accent;
+    path{
+      fill: #fff;
+    }
+  }
+  svg{
+    height: 18px;
+  }  
+}
+
+.title{
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 50px;
+  text-align: center;
+  color: $title;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}

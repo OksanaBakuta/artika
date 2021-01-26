@@ -1,7 +1,403 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
+
+.header-top{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+  }
+  &__logo-img{
+    max-height: 60px;
+  }
+  &__text{
+    @extend %roboto-700;
+    font-size: 16px;
+    color: #189AD1;
+    max-width: 342px;
+  }
+  &__leng-link{
+    background-color: $bglink;
+    @extend %roboto-400;
+    font-size: 14px;
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 15px;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  &__leng-link + .header-top__leng-link{
+    margin-left: 10px;
+  }
+  &__leng-link--active{
+    background-color: $accent;
+    color: #fff;
+  }
+  &__account{
+    display: flex;
+  }
+  &__cart{
+    position: relative;
+  }
+  &__cart-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__cart-num{
+    position: absolute;
+    background-color: $sale;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    top: 12px;
+    right: 9px;
+  }
+}
+
+.callback{
+  display: flex;
+  flex-direction: column;
+  &__link{
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 5px;
+  }
+  &__btn-popup{
+    border: none;
+    border-radius: 17px;
+    background-color: $bglink;
+    padding: 6px 18px 6px 45px;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url('../images/icons/callback.png');
+      background-size: cover;
+      left: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:hover{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+}
+
+.search{
+  display: flex;
+  &__input-box{
+    width: 190px;
+  }
+  &__input{
+    width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    border: 2px solid $bglink;
+    padding: 0 55px 0 10px;
+    outline: none;
+  }
+  &__btn{
+    border: none;
+    margin-left: -50px;
+  }
+}
+
+.menu{
+  background-color: $accent;
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item{
+    font-size: 14px;
+    color: #fff;
+    padding: 12px 0;
+  }
+  &__item + .menu__item{
+    margin-left: 30px;
+  }
+  &__link{
+    color: inherit;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+    &:hover{
+      border-bottom: 1px solid #fff;
+    }
+  }
+}
+
+.header-content{
+  background-image: url('../images/bg-header.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  &__slider{
+    height: 760px;
+  }
+  &__item{
+    margin-top: 100px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+  }
+  &__item-text{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title{
+    @extend %roboto-700;
+    font-size: 58px;
+    line-height: 68px;
+    margin-bottom: 20px;
+    max-width: 400px;
+  }
+  &__desc{
+    max-width: 400px;
+    margin-bottom: 45px;
+  }
+  &__link{
+    background-color: $accent;
+    color: #fff;
+    max-width: 207px;
+    padding: 8px 70px 8px 12px;
+    position: relative;
+    transition: all .3s;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../images/icons/shape.svg');
+      background-repeat: no-repeat;
+    }
+    &:hover{
+      background-color: $sale;
+    }
+  }
+  .slick-dots{
+    display: flex;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    li{
+      font-size: 1px;
+      line-height: 1px;
+      opacity: 60%;
+    }
+    .slick-active{
+      opacity: 1;
+    }
+    li + li{
+      margin-left: 10px;
+    }
+    button{
+      border: none;
+      background-color: $accent;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}
+
+.categories{
+  padding: 120px 0;
+  background-image: url('../images/bg-categories-right.png');
+  background-repeat: no-repeat;
+  background-position: right bottom 55px;
+  &__container{
+    background-image: url('../images/bg-categories-left.png');
+    background-position: left top 120px;
+    background-repeat: no-repeat;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 105px;
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      z-index: 1;
+    }
+    &::before{
+      width: 125px;
+      height: 92px;
+      background-image: url('../images/bg-info2.png');
+      top: -35px;
+      left: -70px;
+    }
+    &::after{
+      width: 125px;
+      height: 105px;
+      background-image: url('../images/bg-info3.png');
+      right: -60px;
+      bottom: -40px;
+    }
+  }
+  &__info-item{
+    padding: 150px 30px 50px;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+    background-color: #fff;
+    width: 370px;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      top: 50px;
+      left: 30px;
+    }
+  }
+  &__info-item--exper::before{
+    background-image: url('../images/icons/drive.svg');
+  }
+  &__info-item--certif::before{
+    background-image: url('../images/icons/drive.svg');
+  }
+  &__info-item--deliv::before{
+    background-image: url('../images/icons/drive.svg');
+  }
+  &__info-title{
+    @extend %roboto-500;
+    color: $title;
+    font-size: 22px;
+    line-height: 26px;
+    max-width: 290px;
+    margin-bottom: 18px;
+  }
+  &__info-text{
+    max-width: 290px;
+    color: #8d8d8d;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  &__item{
+    min-height: 300px;
+    padding: 40px;
+    color: $title;
+    transition: all .3s;
+    background-repeat: no-repeat;
+    &:hover{
+      .categories__item-link::before{
+        width: 100%;
+      }
+    }
+  }
+  &__item--berries{
+    background-color: #EEDEEF;
+    background-position: center bottom;
+    grid-row: span 2;
+    .categories__item-link::before{
+      background-color: #5800e4;
+    }
+    &:hover{
+      .categories__item-link,
+      .categories__num{
+        color: #5800e4;
+      }
+    }
+  }
+  &__item--vegetables{
+    background-color: #DEEEEF;
+    grid-column: span 2;
+    background-position: right -130px center;
+    .categories__item-link::before{
+      background-color: #0093d5;
+    }
+    &:hover{
+      .categories__item-link,
+      .categories__num{
+        color:  #0093d5;
+      }
+    }
+  }
+  &__item--mix{
+    background-color: #FEF6A9;
+    background-position: right -115px bottom -115px;
+    .categories__item-link::before{
+      background-color: #a66d00;
+    }
+    &:hover{
+      .categories__item-link,
+      .categories__num{
+        color:  #a66d00;
+      }
+    }
+  }
+  &__item--mushrooms{
+    background-color: #ECECEC;
+    background-position: right -270px bottom -180px;
+    .categories__item-link::before{
+      background-color: #fe3e57;
+    }
+    &:hover{
+      .categories__item-link,
+      .categories__num{
+        color: #fe3e57;
+      }
+    }
+  }
+  &__item-title{
+    margin: 8px 0 15px;
+    @extend %roboto-500;
+    font-size: 22px;
+  }
+  &__item-link{
+    padding-bottom: 5px;
+    position: relative;
+    transition: all .3s;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 0;
+      left: 0;
+      bottom: 0;
+      transition: all .3s;
+    }
+  }
+  &__num{
+    transition: all .3s;
+  }
+}
+
 
 
 

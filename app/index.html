@@ -1,16 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Document</title>
+  <title>Artika</title>
 </head>
-<body>
 
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex debitis enim, tenetur cum eveniet labore necessitatibus vel, quae velit vitae animi! A quis optio nam reprehenderit velit fugiat maxime earum.Expedita nisi nihil recusandae voluptate velit harum magnam quibusdam magni suscipit atque adipisci laborum ratione tempora dicta ea quae iste nemo est odit porro, vero qui ullam officiis. Eos, voluptatum.
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <div class="header-top__inner">
+          <a class="logo" href="#">
+            <img class="logo__img header-top__logo-img" src="images/logo.png" alt="logo">
+          </a>
+          <div class="header-top__text">
+            Интернет магазин быстрозамороженных
+            продуктов в г.Харькове
+          </div>
+          <div class="header-top__leng">
+            <a class="header-top__leng-link" href="#">Українська</a>
+            <a class="header-top__leng-link header-top__leng-link--active" href="#">Русский</a>
+            <a class="header-top__leng-link" href="#">English</a>
+          </div>
+          <div class="callback">
+            <a class="callback__link" href="#tel:+380685892525">068-589-25-25</a>
+            <button class="callback__btn-popup">Обратная связь</button>
+          </div>
+          <div class="header-top__account">
+            <form class="search" action="#">
+              <div class="search__input-box">
+                <input class="search__input" type="text">
+              </div>
+              <button class="search__btn user-btn" type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20.002" viewBox="0 0 15.28 15.281">
+                  <path
+                    d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                    transform="translate(-1544.72 -66)" />
+                </svg>
+              </button>
+            </form>
+            <a class="header-top__user user-btn" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path
+                  d="M1392.07,57.928a9.923,9.923,0,0,0-3.8-2.383,5.78,5.78,0,1,0-6.54,0A10.018,10.018,0,0,0,1375,65h1.56a8.44,8.44,0,0,1,16.88,0H1395A9.931,9.931,0,0,0,1392.07,57.928Zm-11.29-7.148A4.22,4.22,0,1,1,1385,55,4.222,4.222,0,0,1,1380.78,50.78Z"
+                  transform="translate(-1375 -45)" />
+              </svg>
+            </a>
+            <div class="header-top__cart user-btn">
+              <a class="header-top__cart-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                  <path
+                    d="M1527.44,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1527.44,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1527.44,61.183Zm1.75-2.806h-12.81a0.823,0.823,0,0,1-.8-0.628l-2.68-11.115h-2.06a0.817,0.817,0,1,1,0-1.634h2.71a0.824,0.824,0,0,1,.8.627l0.74,3.078h16.1a0.818,0.818,0,0,1,.8,1.014l-2,8.038A0.822,0.822,0,0,1,1529.19,58.377Zm-12.16-1.635h11.52l1.59-6.4h-14.65ZM1517.48,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1517.48,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1517.48,61.183Z"
+                    transform="translate(-1510 -45)" />
+                </svg>
+              </a>
+              <span class="header-top__cart-num">2</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Оплата и доставка</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Кулинарная книга</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-content">
+      <div class="container-small">
+        <div class="header-content__slider">
+          <div class="header-content__item" style="background-image: url('images/product/5.png');">
+            <div class="header-content__item-text">
+              <div class="header-content__title">Малина целая</div>
+              <p class="header-content__desc">Лучший выбор для приготовления выпечки и напитков.</p>
+              <a class="header-content__link" href="#">Купить сейчас</a>
+            </div>
+          </div>
+          <div class="header-content__item" style="background-image: url('images/product/6.png');">
+            <div class="header-content__item-text">
+              <div class="header-content__title">Суп овощной с грибами</div>
+              <p class="header-content__desc">Отличный вариант для быстрого приготовлния вкуснейшого овощного
+                супа.Только
+                натуральные продукты! </p>
+              <a class="header-content__link" href="#">Купить сейчас</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="categories">
+      <div class="categories__container">
+        <div class="container-small">
+          <div class="categories__info">
+            <div class="categories__info-item categories__info-item--exper">
+              <div class="categories__info-title">Более 20 лет на рынке</div>
+              <p class="categories__info-text">
+                Вот уже более 20 лет мы радуем наших покупателей качественной продукцией
+              </p>
+            </div>
+            <div class="categories__info-item categories__info-item--certif">
+              <div class="categories__info-title">Сертифицированная продукция</div>
+              <p class="categories__info-text">
+                У нас только натуральная и качественная продукция.
+              </p>
+            </div>
+            <div class="categories__info-item categories__info-item--deliv">
+              <div class="categories__info-title">Доставка</div>
+              <p class="categories__info-text">
+                Мы предоставляем доставку курьером в крупных городах Украины
+              </p>
+            </div>
+          </div>
+          <h5 class="title">Категории товара</h5>
+          <div class="categories__items">
+            <a class="categories__item categories__item--berries" href="#"
+              style="background-image: url('images/product/1.png');">
+              <span class="categories__num">
+                ( <span>22</span> товаров)
+              </span>
+              <div class="categories__item-title">Ягоды и фрукты</div>
+              <span class="categories__item-link">Просмотреть</span>
+            </a>
+            <a class="categories__item categories__item--vegetables" href="#"
+              style="background-image: url('images/product/2.png');">
+              <span class="categories__num">
+                ( <span>18</span> товаров)
+              </span>
+              <div class="categories__item-title">Овощи</div>
+              <span class="categories__item-link">Просмотреть</span>
+            </a>
+            <a class="categories__item categories__item--mix" href="#"
+              style="background-image: url('images/product/3.png');">
+              <span class="categories__num">
+                ( <span>16</span> товаров)
+              </span>
+              <div class="categories__item-title">Смеси</div>
+              <span class="categories__item-link">Просмотреть</span>
+            </a>
+            <a class="categories__item categories__item--mushrooms" href="#"
+              style="background-image: url('images/product/4.png');">
+              <span class="categories__num">
+                ( <span>5</span> товаров)
+              </span>
+              <div class="categories__item-title">Грибы</div>
+              <span class="categories__item-link">Просмотреть</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
