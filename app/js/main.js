@@ -1,11 +1,61 @@
-$(function(){
+$(function () {
+
+
+  const popupCall = $("[data-modal]");
+  const popupClose = $("[data-close]");
   
+  popupCall.on('click', function(e){
+    e.preventDefault();
+
+    let $this = $(this);
+    let modalId = $this.data('modal');
+
+    $(modalId).addClass('open');
+  });
+
+  popupClose.on('click', function(e){
+    e.preventDefault();
+
+    let $this = $(this);
+    let modalParents = $this.parents('.popup');
+
+    modalParents.removeClass('open');
+  });
+
+  $('.popup').on('click', function(){
+    $(this).removeClass('open');
+  });
+
+  $('.popup__content').on('click', function(e){
+    e.stopPropagation();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.keyCode == 27) {
+      if ($('.open').length > 0) {
+        $('.popup').removeClass('open');
+      }
+    }
+  });
+
+  
+  $('.popup__input--tel').mask('+38(000)000-00-00');
+
+  $('.partners__inner').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 5,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000
+  });
+
   $('.header-content__slider').slick({
     arrows: false,
     dots: true,
     fade: true,
     autoplay: true,
-    autoplaySpeed: 4000
+    autoplaySpeed: 3000
   });
 
   function getTimeRemaining(endtime) {

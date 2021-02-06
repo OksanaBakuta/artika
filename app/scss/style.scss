@@ -25,8 +25,8 @@
     @extend %roboto-400;
     font-size: 14px;
     color: #000;
-    padding: 5px 15px;
-    border-radius: 15px;
+    padding: 11px 12px;
+    border-radius: 50%;
     transition: all .3s;
     &:hover{
       background-color: $accent;
@@ -66,34 +66,34 @@
 
 .callback{
   display: flex;
-  flex-direction: column;
+  align-items: center;
   &__link{
     font-size: 18px;
     color: #000;
-    margin-bottom: 5px;
+    margin-right: 15px;
   }
   &__btn-popup{
     border: none;
-    border-radius: 17px;
+    border-radius: 50%;
     background-color: $bglink;
-    padding: 6px 18px 6px 45px;
+    padding: 13px;
+    line-height: 1px;
     cursor: pointer;
     position: relative;
     transition: all .3s;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-image: url('../images/icons/callback.png');
-      background-size: cover;
-      left: 8px;
-      top: 50%;
-      transform: translateY(-50%);
+    svg{
+      height: 25px;
+      width: 25px;
+    }
+    path{
+      fill: $accent;
+      transition: all .3s;
     }
     &:hover{
       background-color: $accent;
-      color: #fff;
+      path{
+        fill: #fff;
+      }
     }
   }
 }
@@ -153,9 +153,20 @@
   &__item{
     margin-top: 100px;
     height: 500px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top right;
+  }
+  &__item-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img-box{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+  }
+  &__img{
+    width: 100%;
   }
   &__item-text{
     height: 100%;
@@ -282,10 +293,10 @@
     }
   }
   &__info-item--exper::before{
-    background-image: url('../images/icons/drive.svg');
+    background-image: url('../images/icons/certificate.svg');
   }
   &__info-item--certif::before{
-    background-image: url('../images/icons/drive.svg');
+    background-image: url('../images/icons/plant.svg');
   }
   &__info-item--deliv::before{
     background-image: url('../images/icons/drive.svg');
@@ -404,8 +415,7 @@
   background-position: center center;
   background-size: cover;
   &__container{
-    padding: 160px 0;
-    height: 690px;
+    padding: 130px 0;
     background-image: url('../images/bg-sale-1.png');
     background-repeat: no-repeat;
     background-position: left center;
@@ -447,9 +457,343 @@
   }
 }
 
+.product{
+  padding: 120px 0;
+  text-align: center;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+}
 
+.product-item{
+  max-width: 370px;
+  height: 600px;
+  box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  position: relative;
+  &__promo{
+    position: absolute;
+    top: 23px;
+    right: -40px;
+    transform: rotate(45deg);
+    padding: 10px 50px;
+    background-color: #F10000;
+    text-transform: uppercase;
+    color: #fff;
+    @extend %roboto-700;
+    letter-spacing: 5px;
+  }
+  &__img-box{
+    width: 370px;
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    &:hover{
+      .product-item__img{
+        transform: scale(1.2);
+      }
+    }
+  }
+  &__img{
+    width: 370px;
+    height: 300px;
+    object-fit: cover;
+    transition: all .3s;
+  }
+  &__content{
+    padding: 21px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title{
+    @extend %roboto-700;
+    font-size: 22px;
+    color: $title;
+    margin-bottom: 12px;
+  }
+  &__text{
+    line-height: 30px;
+  }
+  &__info{
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+  }
+  &__price{
+    @extend %roboto-500;
+    
+  }
+  &__search{
+    margin: 0 10px 0 auto;
+  }
+  &__search,
+  &__btn{
+    background-color: $bglink;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: all .3s;
+    path{
+      transition: all .3s;
+    }
+    &:hover{
+      background-color: $accent;
+      path{
+        fill: #fff;
+      }
+    }
+  }
+  &__btn{
+    border: none;
+    cursor: pointer;
+  }
+}
 
+.cooking{
+  padding: 120px 0;
+  background-image: url('../images/bg-sale.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  &__inner{
+    display: flex;
+  }
+  &__link{
+    width: 45%;
+    height: 530px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-right: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      .cooking__link-img{
+        transform: scale(2);
+      }
+    }
+  }
+  &__link-img{
+    transition: all .3s;
+  }
+  &__content{
+    width: 45%;
+  }
+  &__subtitle{
+    @extend %roboto-700;
+    font-size: 22px;
+    color: $title;
+    margin-bottom: 15px;
+  }
+  &__item{
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  &__content-link{
+    margin-top: 30px;
+    display: inline-block;
+    background-color: $accent;
+    text-transform: uppercase;
+    padding: 15px 35px;
+    color: #fff;
+    @extend %roboto-700;
+    letter-spacing: 2px;
+    transition: all .3s;
+    &:hover{
+      background-color: $sale;
+    }
+  }
+  &__text{
+    margin-bottom: 10px;
+  }
+}
 
+.partners{
+  padding: 120px 0;
+  &__img-box{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__img{
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.certificates{
+  background-image: url('../images/bg-categories-left.png');
+  background-repeat: no-repeat;
+  background-position: left bottom 20px;
+  background-size: auto 65%;
+  &__wrapper{
+    padding: 120px 0;
+    background-image: url('../images/bg-categories-right.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: auto 50%;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__img{
+    height: 380px;
+  }
+}
+
+.footer{
+  padding: 70px 0 30px;
+  background-color: #D1E5FB;
+  &__items{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo-img{
+    height: 60px;
+  }
+  &__addres{
+    margin: 10px 0 20px;
+  }
+  &__email{
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  &__title{
+    @extend %roboto-500;
+    font-size: 22px;
+    line-height: 36px;
+    color: $title;
+    margin-bottom: 30px;
+  }
+  &__list-item{
+    margin-bottom: 15px;
+    cursor: pointer;
+    &:hover{
+      .footer__link{
+        border-bottom: 1px solid #555;
+      }
+    }
+  }
+  &__link{
+    color: #555;
+    border-bottom: 1px solid transparent;
+    transition: all .3s;
+  }
+  &__text{
+    max-width: 270px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  &__btn-popup{
+    border: 1px solid $accent;
+    path{
+      fill:$accent;
+    }
+  }
+}
+
+.social{
+  &__link + .social__link{
+    margin-left: 10px;
+  }
+  &__link{
+    svg{
+      height: 35px;
+    }
+    path{
+      fill: $accent;
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: $sale;
+      }
+    }
+  }
+}
+
+.popup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+  &.open{
+    opacity: 1;
+    visibility: visible;
+    .popup__content{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  &__content{
+    background-color: #fff;
+    max-width: 800px;
+    padding: 65px;
+    position: relative;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .3s;
+  }
+  &__close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #000;
+    font-size: 40px;
+  }
+  &__title{
+    @extend %roboto-700;
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+  }
+  &__input{
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    outline: none;
+  }
+  &__btn{
+    padding: 10px;
+    cursor: pointer;
+    background-color: $accent;
+    border: none;
+    color: #fff;
+    @extend %roboto-500;
+    letter-spacing: 2px;
+    transition: all .3s;
+    &:hover{
+      background-color: $sale;
+    }
+  }
+}
 
 
 

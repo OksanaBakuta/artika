@@ -1,5 +1,5 @@
 $accent: #2967AF;
-$sale: #FF9600;
+$sale: #fe3e57;
 $bglink: #E7E7E7;
 $title: #29282d;
 
@@ -22,4 +22,11 @@ $title: #29282d;
 %quicksand-500{
   font-family: 'Quicksand-Medium', sans-serif;
   font-weight: 500;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
