@@ -9,6 +9,10 @@ body{
   line-height: 26px;
 }
 
+.main{
+  mai-height: 100%;
+}
+
 .container{
   max-width: 1800px;
   padding: 0 15px;
@@ -52,6 +56,27 @@ body{
   margin-bottom: 60px;
 }
 
+.title-filters{
+  display: inline-block;
+  @extend %roboto-700;
+  font-size: 20px;
+  color: $accent;
+  padding-right: 55px;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  &::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 35px;
+    background-color: $accent;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+}
+
 .link-btn{
   display: inline-block;
   border: 3px solid $accent;
@@ -62,4 +87,46 @@ body{
   &:hover{
     border: 3px solid $sale;
   }
+}
+
+.breadcrumbs{
+  display: inline-flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+  }
+  &__item{
+    color: $title;
+    font-size: 18px;
+    padding-right: 40px;
+    position: relative;
+    &::after{
+      content: '/';
+      position: absolute;
+      right: 15px;
+      top: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      color: $accent;
+      @extend %roboto-700;
+      &::after{
+        display: none;
+      }
+    }
+    &:hover{
+      color: $accent;
+    }
+  }
+  &__link{
+    color: inherit;
+  }
+}
+
+.checkbox{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }

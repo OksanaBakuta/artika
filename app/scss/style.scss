@@ -476,7 +476,18 @@
   border-radius: 10px;
   margin-bottom: 50px;
   overflow: hidden;
-  position: relative;
+  &__img-box{
+    width: 370px;
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    &:hover{
+      .product-item__img{
+        transform: scale(1.2);
+      }
+    }
+  }
   &__promo{
     position: absolute;
     top: 23px;
@@ -489,20 +500,9 @@
     @extend %roboto-700;
     letter-spacing: 5px;
   }
-  &__img-box{
-    width: 370px;
-    height: 300px;
-    display: block;
-    overflow: hidden;
-    &:hover{
-      .product-item__img{
-        transform: scale(1.2);
-      }
-    }
-  }
   &__img{
-    width: 370px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: all .3s;
   }
@@ -528,8 +528,25 @@
     align-items: center;
   }
   &__price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__price-num{
     @extend %roboto-500;
-    
+  }
+  &__price-promo{
+    color: #ababab;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 110%;
+      top: 50%;
+      left: -4px;
+      background-color: #ababab;
+    }
   }
   &__search{
     margin: 0 10px 0 auto;
@@ -557,6 +574,36 @@
   &__btn{
     border: none;
     cursor: pointer;
+  }
+  &.product-item--list {
+    max-width: 100%;
+    width: 100%;
+    height: 252px;
+    display: flex;
+    .product-item__img-box{
+      width: 200px;
+      height: 252px;
+    }
+    .product-item__content{
+      height: 252px;
+      width: 100%;
+      max-width: 600px;
+      padding: 25px 40px;
+    }
+    .product-item__promo {
+      top: 21px;
+      right: -51px;
+      padding: 5px 50px;
+    }
+    .product-item__price{
+      flex-direction: row;
+    }
+    .product-item__price-promo{
+      order:1;
+    }
+    .product-item__price-num{
+      margin-right: 15px;
+    }
   }
 }
 
@@ -738,7 +785,7 @@
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 5;
+  z-index: 20;
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
@@ -794,6 +841,224 @@
     }
   }
 }
+
+/* -------------------КАТАЛОГ----------------------------------- */
+
+.top{
+  &__container{
+    background-image: url('../images/bg-catalog.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+  }
+  &__wrapper{
+    background-image: url('../images/product/2.png');
+    background-repeat: no-repeat;
+    background-position: left -90px center;
+  }
+  &__inner{
+    background-image: url('../images/product/4-big.png');
+    background-repeat: no-repeat;
+    background-position: right -130px center;
+    padding: 130px 0;
+    text-align: center;
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+}
+
+.shop{
+  padding: 120px 0;
+  &__inner{
+    display: flex;
+  }
+  &__filter{
+    width: 370px;
+    margin-right: 40px;
+  }
+}
+
+.filter{
+  margin-bottom: 40px;
+  &__label{
+    display: block;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  &__checkbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 20px;
+    letter-spacing: 1.5px;
+    transition: all .3s;
+  }
+  &__input:checked + .filter__checkbox{
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+.popular-item{
+  display: flex;
+  margin-bottom: 20px;
+  &:hover{
+    .popular-item__img{
+      transform: scale(1.3);
+    }
+    .popular-item__title,
+    .popular-item__price{
+      color: $accent;
+    }
+  }
+  &__img-box{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  &__img{
+    transition: all .3s;
+  }
+  &__title,
+  &__price{
+    display: block;
+    @extend %roboto-500;
+    color: #000;
+  }
+  &__title{
+    margin-bottom: 5px;
+  }
+}
+
+.shop-content{
+  width: 100%;
+  max-width: 800px;
+  &__filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  &__filter-btn{
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    background-color: transparent;
+    cursor: pointer;
+    outline-color: transparent;
+    path{
+      fill: #8d8d8d;
+      transition: all .3s;
+    }
+  }
+  &__filter-btn--active{
+    path{
+      fill: $accent;
+    }
+  }
+  &__filter-form{
+    display: flex;
+  }
+  &__filter-inner{
+    display: flex;
+    margin-right: 20px;
+  }
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__select.opened{
+    .jq-selectbox__trigger-arrow{
+      border-top: 5px solid $accent;
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.jq-selectbox__select {
+  height: 32px;
+  padding: 0 45px 0 10px;
+  border: none;
+  border-bottom-color: none;
+  border-radius: 0;
+  box-shadow: none;
+  color: #333;
+  text-shadow: none;
+  background: #f6f6f6;
+}
+
+.jq-selectbox__trigger{
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  border-top: 5px solid #616161;
+  transition: all .3s;
+}
+
+.jq-selectbox:hover{
+  & .jq-selectbox__trigger-arrow {
+    border-top-color: $accent;
+  }
+} 
+
+.jq-selectbox li.selected {
+    background-color: $accent;
+    color: #FFF;
+}
+.jq-selectbox li:hover {
+    background-color: $accent;
+    color: #FFF;
+}
+
+.pagination{
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list{
+    display: flex;
+  }
+  &__item + .pagination__item,
+  &__next{
+    margin-left: 15px;
+  }
+  &__item{
+    color: $accent;
+  }
+  &__link,
+  &__arrow{
+    border: 1px solid $accent;
+    color: $accent;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  &__link{
+    padding: 10px 20px;
+  }
+  &__item--active{
+    .pagination__link{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  &__arrow{
+    padding: 7px 20px;
+  }
+  &__prev{
+    margin-right: 15px;
+    display: none;
+  }
+}
+
 
 
 
