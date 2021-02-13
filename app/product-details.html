@@ -90,52 +90,6 @@
         </ul>
       </nav>
     </div>
-    <div class="header-content">
-      <div class="container-small">
-        <div class="header-content__slider">
-          <div class="header-content__item">
-            <div class="header-content__item-wrapper">
-              <div class="header-content__item-text">
-                <div class="header-content__title">Малина целая</div>
-                <p class="header-content__desc">Лучший выбор для приготовления выпечки и напитков.</p>
-                <a class="header-content__link" href="#">Купить сейчас</a>
-              </div>
-              <div class="header-content__img-box">
-                <img class="header-content__img" src="images/product/1.jpg" alt="product">
-              </div>
-            </div>
-          </div>
-          <div class="header-content__item">
-            <div class="header-content__item-wrapper">
-              <div class="header-content__item-text">
-                <div class="header-content__title">Суп овощной с грибами</div>
-                <p class="header-content__desc">Отличный вариант для быстрого приготовлния вкуснейшого овощного
-                  супа.Только
-                  натуральные продукты! </p>
-                <a class="header-content__link" href="#">Купить сейчас</a>
-              </div>
-              <div class="header-content__img-box">
-                <img class="header-content__img" src="images/product/2.jpg" alt="product">
-              </div>
-            </div>
-          </div>
-          <div class="header-content__item">
-            <div class="header-content__item-wrapper">
-              <div class="header-content__item-text">
-                <div class="header-content__title">Капуста брокколи</div>
-                <p class="header-content__desc">
-                  Вкусная и полезная капуста в любое время года
-                </p>
-                <a class="header-content__link" href="#">Купить сейчас</a>
-              </div>
-              <div class="header-content__img-box">
-                <img class="header-content__img" src="images/product/3.jpg" alt="product">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="popup" id="popup">
       <div class="popup__body">
         <div class="popup__content">
@@ -144,7 +98,7 @@
           <form action="" class="popup__form">
             <input class="popup__input" type="text" placeholder="Ваше имя">
             <input class="popup__input popup__input--tel" type="tel" placeholder="Номер телефона">
-            <button class="popup__btn" type="submit">Позвонить мне</button>
+            <button class="popup__btn btn" type="submit">Позвонить мне</button>
           </form>
         </div>
       </div>
@@ -152,12 +106,12 @@
   </header>
 
   <main class="main">
-   
+
     <section class="top">
       <div class="container top__container">
-        <div class="top__wrapper">
-          <div class="top__inner">
-            <h5 class="title top__title">каталог</h5>
+        <div class="top__wrapper" style="background-image: url('../images/product/3.png');">
+          <div class="top__inner" style="background-image: url('../images/product/3.png')">
+            <h5 class="title top__title">Суп овощной с грибами</h5>
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -166,6 +120,12 @@
                 <li class="breadcrumbs__item">
                   <a href="#" class="breadcrumbs__link">Каталог</a>
                 </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Смеси</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link">Суп овощной с грибами</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -173,6 +133,192 @@
       </div>
     </section>
 
+    <section class="product-one">
+      <div class="container-small">
+        <div class="product-one__inner">
+
+          <div class="product-one__slider product-slider">
+            <div class="product-slider__small">
+              <div class="product-slider__small-item">
+                <img class="product-slider__small-img" src="images/product/2.jpg" alt="">
+              </div>
+              <div class="product-slider__small-item">
+                <img class="product-slider__small-img" src="images/product/2-2.jpg" alt="">
+              </div>
+              <div class="product-slider__small-item">
+                <img class="product-slider__small-img" src="images/product/2-1.jpg" alt="">
+              </div>
+            </div>
+            <div class="product-slider__big">
+              <div class="product-slider__big-item">
+                <img class="product-slider__big-img" src="images/product/2.jpg" alt="">
+              </div>
+              <div class="product-slider__big-item">
+                <img class="product-slider__big-img" src="images/product/2-2.jpg" alt="">
+              </div>
+              <div class="product-slider__big-item">
+                <img class="product-slider__big-img" src="images/product/2-1.jpg" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="product-one__content">
+            <h6 class="product-one__title">Суп овощной с грибами</h6>
+            <div class="product-one__price">
+              <span class="product-one__num">50 грн/кг</span>
+              <span class="product-one__promo">56 грн/кг</span>
+            </div>
+            <ul class="product-one__descr">
+              <li class="product-one__item product-one__item-title">Состав:</li>
+              <li class="product-one__item">картофель</li>
+              <li class="product-one__item">морковь</li>
+              <li class="product-one__item">горох</li>
+              <li class="product-one__item">капуста цветная</li>
+              <li class="product-one__item">шампиньоны</li>
+            </ul>
+            <form class="product-one__form" action="#">
+              <div class="product-one__form-num">
+                <input class="product-one__input" type="number" min="0" value="1" step=".1">
+                <button class="product-one__btn btn" type="submit">В корзину</button>
+              </div>
+              <ul class="product-one__form-tags">
+                <li class="product-one__form-item">
+                  Код товара: <span>5896</span>
+                </li>
+                <li class="product-one__form-item">
+                  Категория: <span>Смеси</span>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="product-one__tubs">
+          <div class="product-one__buttons">
+            <a class="product-one__tub product-one__tub--active" href="#content-1">Описание</a>
+            <a class="product-one__tub" href="#content-2">Отзывы <span>(2)</span> </a>
+          </div>
+          <div class="product-one__tubs-items">
+            <div class="product-one__tubs-item product-one__tubs-item--active" id="content-1">
+              <div class="product-one__tubs-title">
+                Суп овощной с грибами
+              </div>
+              <p class="product-one__text">
+                Быстрозамороженный натуральный продукт. Условия хранения: при температуре не выше минус 18 ° С. Срок
+                годности: не более
+                24 меc. Не подлежит повторной заморозке. Перед тепловой обработкой не размораживайте. Питательная
+                (пищевая) ценность 100
+                г продукта: белков - 2,5 г, жиров - 0,2, углеводов - 10,7г. Энергетическая ценность (калорийность) на
+                100г продукта:
+                228кДж (55ккал).
+              </p>
+            </div>
+            <div class="product-one__tubs-item" id="content-2">
+              <div class="reviews">
+                <div class="reviews__inner">
+                  <div class="reviews__item">
+                    <div class="reviews__box-img">
+                      <img class="reviews__img" src="images/photo.jpg" alt="photo">
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__top">
+                        <span class="reviews__name">Анастасия Белкова</span>
+                        <span class="reviews__date">07.02.2021</span>
+                      </div>
+                      <p class="reviews__text">
+                        Покупаю у Вас не первый раз. Отличная смесь! Очень выручает, когда нужно быстро приготовить
+                        что-то
+                        на обуд. Спасибо большое!
+                      </p>
+                      <button class="reviews__btn">Ответить</button>
+                    </div>
+                  </div>
+                  <form class="review-form" action="#">
+                    <textarea class="review-form__textarea" placeholder="Введите свой ответ"></textarea>
+                    <div class="review-form__box-btn">
+                      <button class="review-form__btn btn" type="submit">Отправить</button>
+                      <p class="review-form__btn-text">
+                        * Оставлять ответ могут только зарегистрированные пользователи
+                      </p>
+                    </div>
+                  </form>
+                </div>
+                <div class="reviews__inner">
+                  <div class="reviews__item reviews__item--small">
+                    <div class="reviews__box-img">
+                      <img class="reviews__img" src="images/logo.png" alt="photo">
+                    </div>
+                    <div class="reviews__content">
+                      <div class="reviews__top">
+                        <span class="reviews__name">АРКТИКА</span>
+                        <span class="reviews__date">07.02.2021</span>
+                      </div>
+                      <p class="reviews__text">
+                        Благодарим за такие теплые слова!
+                      </p>
+                      <button class="reviews__btn">Ответить</button>
+                    </div>
+                  </div>
+                  <form class="review-form review-form--small" action="#">
+                    <textarea class="review-form__textarea" placeholder="Введите свой ответ"></textarea>
+                    <div class="review-form__box-btn">
+                      <button class="review-form__btn btn" type="submit">Отправить</button>
+                      <p class="review-form__btn-text">
+                        *Оставлять ответ могут только зарегистрированные пользователи
+                      </p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="review__title">Оставить отзыв:</div>
+          <form class="review__form" action="#">
+            <div class="review__form-top">
+              <input type="text" class="review__input" placeholder="Введите Ваше имя*">
+              <input type="text" class="review__input" placeholder="Введите Ваш email*">
+            </div>
+            <textarea class="review__textarea" placeholder="Тект Вашего отзыва"></textarea>
+            <button class="review__btn btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="popular">
+      <div class="container-small">
+        <h6 class="title">хит сезона</h6>
+        <div class="popular__items">
+          <a class="popular-item popular-item--big" href="#">
+            <div class="popular-item__img-box">
+              <img class="popular-item__img" src="images/product/1.jpg" alt="popular product">
+            </div>
+            <div class="popular-item__descr">
+              <span class="popular-item__title">Малина целая</span>
+              <span class="popular-item__price">55 грн/кг</span>
+            </div>
+          </a>
+          <a class="popular-item popular-item--big" href="#">
+            <div class="popular-item__img-box">
+              <img class="popular-item__img" src="images/product/2.jpg" alt="popular product">
+            </div>
+            <div class="popular-item__descr">
+              <span class="popular-item__title">Суп овощной с грибами</span>
+              <span class="popular-item__price">55 грн/кг</span>
+            </div>
+          </a>
+          <a class="popular-item popular-item--big" href="#">
+            <div class="popular-item__img-box">
+              <img class="popular-item__img" src="images/product/3.jpg" alt="popular product">
+            </div>
+            <div class="popular-item__descr">
+              <span class="popular-item__title">Капуста брокколи</span>
+              <span class="popular-item__price">55 грн/кг</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">

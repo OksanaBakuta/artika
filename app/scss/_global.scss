@@ -97,7 +97,7 @@ body{
   }
   &__item{
     color: $title;
-    font-size: 18px;
+    font-size: 15px;
     padding-right: 40px;
     position: relative;
     &::after{
@@ -129,4 +129,18 @@ body{
   overflow: hidden;
   clip: rect(0 0 0 0);
   position: absolute;
+}
+
+.btn{
+  background-color: $accent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  outline-color: transparent;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: all .3s;
+  &:hover{
+    background-color: $sale;
+  }
 }
