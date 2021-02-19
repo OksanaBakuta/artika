@@ -20,28 +20,13 @@
     color: #189AD1;
     max-width: 342px;
   }
-  &__leng-link{
-    background-color: $bglink;
-    @extend %roboto-400;
-    font-size: 14px;
-    color: #000;
-    padding: 11px 12px;
-    border-radius: 50%;
-    transition: all .3s;
-    &:hover{
-      background-color: $accent;
-      color: #fff;
-    }
-  }
-  &__leng-link + .header-top__leng-link{
-    margin-left: 10px;
-  }
-  &__leng-link--active{
-    background-color: $accent;
-    color: #fff;
+  &__info{
+    display: flex;
+    align-items: center;
   }
   &__account{
     display: flex;
+    margin-left: 30px;
   }
   &__cart{
     position: relative;
@@ -63,6 +48,30 @@
     right: 9px;
   }
 }
+
+.leng{
+  &__link{
+    background-color: $bglink;
+    @extend %roboto-400;
+    font-size: 14px;
+    color: #000;
+    padding: 11px 12px;
+    border-radius: 50%;
+    transition: all .3s;
+    &:hover{
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+  &__link + .leng__link{
+    margin-left: 10px;
+  }
+  &__link--active{
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
 
 .callback{
   display: flex;
@@ -117,8 +126,70 @@
   }
 }
 
-.menu{
+.btn-menu{
+  width: 40px;
+  height: 40px;
+  background-color: #E7E7E7;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+  span{
+    background-color: $accent;
+    width: 30px;
+    height: 2px;
+    transition: all .2s;
+  }
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: $accent;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s;
+  }
+  &::before{
+    top: 10px;
+  }
+  &::after{
+    bottom: 10px;
+  }
+  &.btn-menu--close{
+    background-color: $accent;
+    span{
+      opacity: 0;
+    }
+    &::before,
+    &::after{
+      left: 10px;
+      top: 19px;
+      background-color: #fff;
+    }
+    &::before{
+      transform: rotate(45deg) ;
+    }
+    &::after{
+      transform: rotate(-45deg) ;
+    }
+  }
+}
+
+
+
+.menu-box{
   background-color: $accent;
+  &__bottom{
+    display: none;
+  }
+}
+
+.menu{
   &__list{
     display: flex;
     justify-content: center;
@@ -167,6 +238,8 @@
   }
   &__img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   &__item-text{
     height: 100%;
@@ -207,33 +280,33 @@
       background-color: $sale;
     }
   }
-  .slick-dots{
-    display: flex;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 95px;
-    left: 50%;
-    transform: translateX(-50%);
-    li{
-      font-size: 1px;
-      line-height: 1px;
-      opacity: 60%;
-    }
-    .slick-active{
-      opacity: 1;
-    }
-    li + li{
-      margin-left: 10px;
-    }
-    button{
-      border: none;
-      background-color: $accent;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      cursor: pointer;
-      outline: none;
-    }
+}
+.slick-dots{
+  display: flex;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 95px;
+  left: 50%;
+  transform: translateX(-50%);
+  li{
+    font-size: 1px;
+    line-height: 1px;
+    opacity: 60%;
+  }
+  .slick-active{
+    opacity: 1;
+  }
+  li + li{
+    margin-left: 10px;
+  }
+  button{
+    border: none;
+    background-color: $accent;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
   }
 }
 

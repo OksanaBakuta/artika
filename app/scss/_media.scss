@@ -1,0 +1,637 @@
+@media (max-width: 1400px){
+  .header-top{
+    &__text{
+      max-width: 240px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__cart-num{
+      top: 5px;
+      right: 6px;
+      font-size: 9px;
+    }
+  }
+  .leng{
+    &__link{
+      font-size: 12px;
+      padding: 8px 9px;
+    }
+  }
+  .callback{
+    &__btn-popup{
+      padding: 10px;
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .user-btn{
+    padding: 5px 10px;
+    height: 40px;
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .search{
+    &__input-box{
+      width: 140px;
+    }
+    &__input{
+      height: 40px;
+    }
+    &__btn{
+      margin-left: -40px;
+    }
+  }
+  .menu{
+    &__item{
+      padding: 5px 0;
+    }
+  }
+  .categories{
+    background-image: none;
+    &__container{
+      background-image: none;
+    }
+    &__info::before,
+    &__info::after{
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1200px){
+  .categories{
+    &__info-item{
+      padding: 100px 30px 30px;
+      width: 270px;
+      height: 290px;
+      &::before{
+        top: 20px;
+      }
+    }
+    &__info-title{
+      max-width: 260px;
+    }
+    &__item--mix {
+      background-position: right -204px bottom -140px;
+    }
+    &__item--mushrooms {
+      background-position: right -353px bottom -205px;
+    }
+    &__item--vegetables {
+      background-position: right -290px center;
+    }
+  }
+  .sale{
+    &__container{
+      padding: 75px 0;
+      background-image: none;
+    }
+    &__inner{
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__counter{
+      justify-content: center;
+    }
+    &__counter-num + .sale__counter-num{
+      margin-left: 45px;
+    }
+  }
+  .product-item{
+    max-width: 300px;
+    height: 490px;
+    & + .product-item{
+      margin-left: 10px;
+    }
+    &:nth-child(4){
+      margin-left: 0;
+    }
+    &__img-box {
+      width: 300px;
+      height: 220px;
+    }
+    &__content{
+      height: 265px;
+    }
+  }
+}
+
+@media (max-width: 1100px){
+  .callback{
+    &__link{
+      display: none;
+    }
+  }
+  .header-content{
+    &__item-wrapper{
+      justify-content: space-around;
+    }
+    &__img-box{
+      width: 300px;
+      height: 300px;
+    }
+    &__item{
+      height: 400px;
+      margin-top: 50px;
+    }
+    &__title{
+      font-size: 50px;
+      line-height: 56px;
+      margin-bottom: 15px;
+    }
+    &__desc{
+      margin-bottom: 20px;
+    }
+    &__slider{
+      height: 500px;
+    }
+  }
+  .title{
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 900px){
+  .header-top{
+    &__text{
+      max-width: 150px;
+    }
+  }
+  .leng{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    &__link{
+      padding: 0 8px;
+    }
+    &__link + .leng__link{
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  .categories{
+    &__info-item{
+      width: 230px;
+      height: 250px;
+    }
+    &__info-title{
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+    &__info-text{
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  .categories{
+    &__item{
+      padding: 15px;
+      min-height: 270px;
+    }
+    &__item--vegetables {
+      background-position: right -423px center;
+    }
+    &__item--mix {
+      background-position: right -164px bottom -170px;
+    }
+    &__item--mushrooms {
+      background-position: right -244px bottom -253px;
+    }
+  }
+}
+
+/* -----------------------------------------------------------------*/
+
+@media (max-width: 768px){
+  body{
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .menu-box{
+    padding: 20px 15px;
+    width: 300px;
+    position: absolute;
+    top: 83px;
+    right: 0;
+    max-height: calc(100vh - 72px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: scaleY(0);
+    transform-origin :0 0;
+    transition: .5s ease-in-out;
+    &.menu-box--active{
+      transform: scaleY(1);
+    }
+    &__bottom{
+      display: block;
+      text-align: center;
+      margin-top: 70px;
+      .leng{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+    &__user{
+      color: #fff;
+      font-size: 14px;
+    }
+    &__link{
+      color: inherit;
+      transition: all .3s;
+      &:hover{
+        color: #00bcd4;
+      }
+    }
+  }
+  .menu{
+    &__list{
+      flex-direction: column;
+    }
+    &__item + .menu__item{
+      margin-left: 0;
+    }
+  }
+  .leng{
+    display: none;
+  }
+  .search{
+    display: none;
+  }
+  .header-top{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    &__user{
+      display: none;
+    }
+    &__wrapper{
+      background-color: rgba(41, 103, 175, 0.3);
+    }
+  }
+  .leng{
+    margin-top: 10px;
+    &__link{
+      padding: 3px 8px;
+      &:hover{
+        background-color: #00bcd4;
+      }
+    }
+    &__link--active{
+      background-color: #00bcd4;
+    }
+    &__link + .leng__link{
+      margin-top: 0;
+      margin-left: 5px;
+    }
+  }
+  .btn-menu{
+    display: flex;
+    order: 1;
+    margin-left: 15px;
+  }
+  .header-top{
+    .callback{
+      order: 1;
+      margin-left: 15px;
+    }
+    &__text{
+      max-width: 240px;
+      text-align: center;
+    }
+    &__account{
+      margin-left: 0;
+    }
+    .user-btn{
+      margin-left: 0;
+    }
+    &__inner{
+      padding: 15px 0 10px;
+    }
+  }
+  .header-content{
+    padding-top: 85px;
+    &__item-text{
+      margin-right: 15px;
+    }
+    &__title,
+    &__desc{
+      max-width: 270px;
+    }
+    &__title{
+      font-size: 40px;
+      line-height: 47px;
+    }
+    &__link{
+      max-width: 160px;
+      padding: 8px 45px 8px 12px;
+    }
+  }
+  .popup{
+    &__close{
+      font-size: 30px;
+    }
+    &__content{
+      padding: 45px 40px;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+    &__input{
+      margin-bottom: 10px;
+    }
+  }
+  .categories,
+  .product{
+    padding: 85px 0;
+  }
+  .categories{
+    &__info{
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 50px;
+    }
+    &__info-item{
+      margin-right: 10px;
+      margin-bottom: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+    &__items{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    &__item--berries {
+      grid-row: span 1;
+      background-position: bottom -244px center;
+    }
+    &__item--vegetables {
+      grid-column: span 1;
+      background-position: bottom -395px center;
+    }
+  }
+  .sale{
+    &__counter{
+      margin-bottom: 40px;
+    }
+    &__counter-num{
+      width: 100px;
+      height: 100px;
+    }
+    &__counter-num + .sale__counter-num {
+      margin-left: 20px;
+    }
+    &__counter-time{
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+  .product-item{
+    & + .product-item{
+      margin-left: 0px;
+    }
+    margin: 0 auto;
+    max-width: 265px;
+    height: 485px;
+    &__img-box {
+      width: 265px;
+    }
+  }
+  .product{
+    .slick-dots{
+      bottom: -40px;
+    }
+    &__inner{
+      margin-bottom: 70px;
+    }
+  }
+}
+
+@media (max-width: 615px){
+  .header-top{
+    &__text{
+      display: none;
+    }
+  }
+  .header-content{
+    &__item{
+      height: 270px;
+    }
+    &__slider{
+      height: 355px;
+    }
+    .slick-dots{
+      bottom: 50px;
+      button{
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &__img-box{
+      width: 200px;
+      height: 200px;
+    }
+    &__img{
+      height: 100%;
+    }
+    &__title{
+      font-size: 30px;
+      line-height: 36px;
+      margin-bottom: 10px;
+    }
+  }
+  .menu-box{
+    padding: 10px 20px;
+    width: 215px;
+    &__bottom{
+      margin-top: 15px;
+    }
+    .leng{
+      margin-top: 11px;
+    }
+  }
+  .link-btn{
+    padding: 8px 22px;
+  }
+  .title{
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  .product-item{
+    max-width: 220px;
+    height: 395px;
+    &__img-box {
+      width: 220px;
+      height: 130px;
+    }
+    &__content{
+      padding: 20px 15px;
+      height: 255px;
+    }
+    &__promo{
+      font-size: 10px;
+      line-height: 15px;
+      padding: 5px 30px;
+      top: 22px;
+      right: -26px;
+    }
+    &__title{
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 7px;
+    }
+    &__text{
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width: 520px){
+  .header-content{
+    &__slider{
+      height: 315px;
+    }
+    &__item{
+      margin-top: 30px;
+      height: 200px;
+    }
+    &__img-box{
+      width: 150px;
+      height: 150px;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+  .popup{
+    &__content{
+      padding: 35px;
+    }
+    &__close{
+      right: 8px;
+      top: 11px;
+    }
+    &__title{
+      font-size: 20px;
+    }
+  }
+  .categories{
+    &__info{
+      margin-bottom: 5px;
+    }
+    &__info-item{
+      width: 100%;
+      margin-right: 0;
+      height: 100%;
+    }
+    &__info-title,
+    &__info-text{
+      max-width: 100%;
+    }
+    &__item-title{
+      margin: 8px 0 10px;
+      line-height: 30px;
+    }
+  }
+  .sale{
+    &__container{
+      padding: 50px 0;
+    }
+    &__counter-num{
+      width: 75px;
+      height: 75px;
+    }
+    &__counter-time{
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+}
+
+@media (max-width: 430px){
+  body{
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .header-content{
+    &__slider{
+      height: 370px;
+    }
+    &__item-wrapper{
+      flex-direction: column;
+    }
+    &__item{
+      height: 260px;
+    }
+    &__item-text{
+      order: 1;
+      text-align: center;
+    }
+    &__img-box{
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    &__title{
+      max-width: 100%;
+    }
+    &__desc{
+      max-width: 100%;
+    }
+    &__link{
+      margin: 0 auto;
+    }
+  }
+  .title{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .categories{
+    padding: 50px 0;
+    &__items{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item{
+      width: 100%;
+      min-height: 200px;
+    }
+    &__item--vegetables {
+      background-position: bottom -395px left;
+    }
+    &__item--vegetables {
+      background-position: bottom -436px left -138px;
+    }
+    &__item--mushrooms {
+      background-position: right -302px bottom -253px;
+    }
+  }
+  .sale{
+    &__counter-num{
+      width: 55px;
+      height: 55px;
+    }
+    &__counter-num + .sale__counter-num {
+      margin-left: 15px;
+    }
+    &__counter-time{
+      font-size: 20px;
+      line-height: 25px;
+    }
+    &__counter-text{
+      font-size: 10px;
+      line-height: 15px;
+    }
+  }
+}

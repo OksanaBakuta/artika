@@ -1,36 +1,46 @@
 $(function () {
 
-  $('.form-price__num').ionRangeSlider({
-    type: "double",
-    prefix: "$",
-    onStart: function (data) {
-      $('.form-price__from').val(data.from);
-      $('.form-price__to').val(data.to);
-    },
-    onChange: function (data) {
-      $('.form-price__from').val(data.from);
-      $('.form-price__to').val(data.to);
+  $(window).on('load resize', function(){
+    if ($(window).width() < 768) {
+      $('#product__inner:not(.slick-initialized)').slick({
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 1.5 ,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              autoplay: true,
+              autoplaySpeed: 2000
+            }
+          },
+          {
+            breakpoint: 450,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              autoplay: true,
+              autoplaySpeed: 2000
+            }
+          }
+        ]
+      });
+    }else{
+      $("#product__inner.slick-initialized").slick("unslick");
     }
   });
 
-  
-  $('.form-price__from, .form-price__to').on('change', function(){
-    var my_range = $(".form-price__num").data("ionRangeSlider");
-    var clas = $(this).attr('class');
-    var val;
-    if (clas == 'form-price__from') {
-      val = $('.form-price__from').val();
-      my_range.update({
-        from: val
-      });
-    } if (clas == 'form-price__to') {
-      val = $('.form-price__to').val();
-      my_range.update({
-        to: val
-      });
-    } 
+  $('.btn-menu').on('click', function(){
+    $('.menu-box').toggleClass('menu-box--active');
+    $('.btn-menu').toggleClass('btn-menu--close');
   });
-
 
   $('.reviews__btn').on('click', function(){
     $(this).parents('.reviews__inner').addClass('reviews__inner--form');
@@ -142,34 +152,35 @@ $(function () {
     arrows: false,
     dots: true,
     fade: true,
-    autoplay: true,
-    autoplaySpeed: 3000
+    /* autoplay: true,
+    autoplaySpeed: 3000 */
   });
 
- /*  function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  function getTimeRemaining(endtime) {
+    const total = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor((total / 1000) % 60);
+    const minutes = Math.floor((total / 1000 / 60) % 60);
+    const hours = Math.floor((total / (1000 * 60 * 60)) % 24);
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
+
     return {
-      'total': t,
-      'days': days,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
+      total,
+      days,
+      hours,
+      minutes,
+      seconds
     };
   }
 
-  function initializeClock(endtime) {
-    var clock = document.querySelector('.sale__counter')
-    var daysSpan = clock.querySelector('.days');
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+  function initializeClock(id, endtime) {
+    const clock = document.querySelector('.sale__counter');
+    const daysSpan = clock.querySelector('.sale__counter-days');
+    const hoursSpan = clock.querySelector('.sale__counter-hours');
+    const minutesSpan = clock.querySelector('.sale__counter-minutes');
+    const secondsSpan = clock.querySelector('.sale__counter-seconds');
 
     function updateClock() {
-      var t = getTimeRemaining(endtime);
+      const t = getTimeRemaining(endtime);
 
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
@@ -182,11 +193,43 @@ $(function () {
     }
 
     updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
+    const timeinterval = setInterval(updateClock, 1000);
   }
 
   const deadline = $('.sale__counter').attr('data-time');
   initializeClock('sale__counter', deadline);
- */
+
+
+  $('.form-price__num').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.form-price__from').val(data.from);
+      $('.form-price__to').val(data.to);
+    },
+    onChange: function (data) {
+      $('.form-price__from').val(data.from);
+      $('.form-price__to').val(data.to);
+    }
+  });
+
+
+  $('.form-price__from, .form-price__to').on('change', function () {
+    var my_range = $(".form-price__num").data("ionRangeSlider");
+    var clas = $(this).attr('class');
+    var val;
+    if (clas == 'form-price__from') {
+      val = $('.form-price__from').val();
+      my_range.update({
+        from: val
+      });
+    } if (clas == 'form-price__to') {
+      val = $('.form-price__to').val();
+      my_range.update({
+        to: val
+      });
+    }
+  });
+ 
 
 });
