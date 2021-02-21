@@ -60,6 +60,17 @@
       display: none;
     }
   }
+  .partners{
+    &__img{
+      max-width: 250px;
+    }
+  }
+  .certificates{
+    background-image: none;
+    &__wrapper{
+      background-image: none;
+    }
+  }
 }
 
 @media (max-width: 1200px){
@@ -154,6 +165,39 @@
     font-size: 40px;
     margin-bottom: 40px;
   }
+  .cooking{
+    &__link{
+      height: 400px;
+    }
+  }
+  .certificates{
+    &__wrapper{
+      padding: 85px 0;
+    }
+  }
+  .footer{
+    &__list,
+    &__text{
+      font-size: 12px;
+      line-height: 24px;
+    }
+    &__list-item{
+      margin-bottom: 10px;
+    }
+    &__title{
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 20px;
+    }
+    &__addres,
+    &__email{
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .social__link svg{
+      height: 25px;
+    }
+  }
 }
 
 @media (max-width: 900px){
@@ -203,6 +247,38 @@
       background-position: right -244px bottom -253px;
     }
   }
+  .cooking{
+    &__title{
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 25px;
+    }
+    &__item{
+      margin-bottom: 10px;
+    }
+  }
+  .partners{
+    padding: 50px 0;
+    &__img-box{
+      height: 60px;
+    }
+    &__img{
+      max-width: 150px;
+    }
+  }
+  .certificates{
+    &__wrapper{
+      padding: 50px 0;
+    }
+    &__img{
+      height: 270px;
+    }
+  }
+  .footer{
+    &__text{
+      max-width: 200px;
+    }
+  }
 }
 
 /* -----------------------------------------------------------------*/
@@ -216,7 +292,7 @@
     padding: 20px 15px;
     width: 300px;
     position: absolute;
-    top: 83px;
+    top: 85px;
     right: 0;
     max-height: calc(100vh - 72px);
     display: flex;
@@ -415,6 +491,50 @@
       margin-bottom: 70px;
     }
   }
+  .cooking{
+    padding: 85px 0 50px;
+    &__inner{
+      flex-direction: column;
+    }
+    &__link{
+      order: 1;
+      width: 100%;
+      margin-right: 0;
+      margin-top: 30px;
+    }
+    &__content{
+      width: 100%;
+    }
+    &__item{
+      font-size: 18px;
+    }
+  }
+  .partners{
+    &__img-box{
+      height: 35px;
+    }
+  }
+  .certificates{
+    &__img{
+      height: 200px;
+    }
+  }
+  .footer{
+    padding: 40px 0 30px;
+    &__list,
+    &__text{
+      font-size: 10px;
+      line-height: 18px;
+    }
+    &__addres,
+    &__email {
+      font-size: 11px;
+      line-height: 15px;
+    }
+    &__addres{
+      margin: 15px 0 10px;
+    }
+  }
 }
 
 @media (max-width: 615px){
@@ -494,6 +614,22 @@
       line-height: 20px;
     }
   }
+  .footer{
+    &__items{
+      flex-wrap: wrap;
+    }
+    &__social{
+      width: 100%;
+      margin-top: 20px;
+    }
+    &__text{
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+    &__title{
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @media (max-width: 520px){
@@ -555,6 +691,45 @@
     &__counter-time{
       font-size: 30px;
       line-height: 35px;
+    }
+  }
+  .cooking{
+    &__item{
+      font-size: 16px;
+    }
+    &__subtitle{
+      font-size: 18px;
+    }
+    &__link{
+      height: 250px;
+    }
+    &__content-link{
+      padding: 10px 15px;
+    }
+  }
+  .certificates{
+    &__img{
+      height: 150px;
+    }
+  }
+  .footer{
+    &__items{
+      justify-content: space-around;
+    }
+    &__info{
+      width: 100%;
+      text-align: center;
+    }
+    &__logo-img,
+    &__btn-popup{
+      margin: 0 auto;
+    }
+    &__social{
+      text-align: center;
+    }
+    &__menu,
+    &__user{
+      margin-top: 20px;
     }
   }
 }
@@ -632,6 +807,11 @@
     &__counter-text{
       font-size: 10px;
       line-height: 15px;
+    }
+  }
+  .certificates{
+    &__img{
+      height: 110px;
     }
   }
 }

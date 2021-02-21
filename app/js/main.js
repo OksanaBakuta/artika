@@ -139,21 +139,41 @@ $(function () {
   
   $('.popup__input--tel').mask('+38(000)000-00-00');
 
-  $('.partners__inner').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 5,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000
-  });
+  $(window).on('load resize', function () {
+    $('.partners__inner').slick({
+      slidesToShow: 4,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          }
+        },
+        {
+          breakpoint: 450,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+          }
+        }
+      ]
+    });
+  };
 
   $('.header-content__slider').slick({
     arrows: false,
     dots: true,
     fade: true,
-    /* autoplay: true,
-    autoplaySpeed: 3000 */
+    autoplay: true,
+    autoplaySpeed: 3000
   });
 
   function getTimeRemaining(endtime) {
