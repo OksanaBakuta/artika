@@ -1,5 +1,103 @@
 $(function () {
 
+  const body = $('body');
+  const lockPadding = $('.lock-padding');
+
+  let unlock = true;
+
+  const timeout = 300;
+
+  $('.shop-content__btn').on('click', function () {
+     bodyLock();
+    $('.shop__filter-wrapper').addClass('shop__filter-wrapper--active');
+    $('.shop__filter').addClass('shop__filter--active');
+    $('.shop__filter-wrapper').on('click', function (e) {
+      if (!e.target.closest('.shop__filter')) {
+        filterClose(e.target.closest('.shop__filter-wrapper'));
+      }
+    });
+  });
+
+ 
+  const filterCloseIcon = $('.filter-close');
+  if (filterCloseIcon.length > 0) {
+    filterCloseIcon.on('click', function (e) {
+      filterClose(filterCloseIcon.closest('.shop__filter-wrapper'));
+      e.preventDefault();
+    });
+  }
+  
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode == 27) {
+      if ($('.shop__filter-wrapper--active').length > 0) {
+        filterClose();
+      }
+    }
+  });
+
+  function filterClose() {
+    const filterActive = $('.shop__filter-wrapper.shop__filter-wrapper--active');
+      filterActive.removeClass('shop__filter-wrapper--active');
+      $('.shop__filter').removeClass('shop__filter--active');
+      bodyUnlock();
+  }
+
+  function bodyLock() {
+    const lockpaddingValue = $(window).outerWidth() - $('.container-small').outerWidth();
+
+    if (lockPadding.length > 0) {
+      lockPadding.css("padding-right", lockpaddingValue);
+    }
+    body.css("padding-right", lockpaddingValue);
+    body.addClass('no-scroll');
+
+    unlock = false;
+    setTimeout(function () {
+      unlock = true;
+    }, timeout);
+  }
+
+  function bodyUnlock() {
+    setTimeout(function () {
+      lockPadding.css("padding-right", "0px");
+      body.css("padding-right", "0px");
+      body.removeClass('no-scroll');
+    }, timeout);
+  }
+
+
+
+  $('.form-price__num').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.form-price__from').val(data.from);
+      $('.form-price__to').val(data.to);
+    },
+    onChange: function (data) {
+      $('.form-price__from').val(data.from);
+      $('.form-price__to').val(data.to);
+    }
+  });
+
+
+  $('.form-price__from, .form-price__to').on('change', function () {
+    var my_range = $(".form-price__num").data("ionRangeSlider");
+    var clas = $(this).attr('class');
+    var val;
+    if (clas == 'form-price__from') {
+      val = $('.form-price__from').val();
+      my_range.update({
+        from: val
+      });
+    } if (clas == 'form-price__to') {
+      val = $('.form-price__to').val();
+      my_range.update({
+        to: val
+      });
+    }
+  });
+
   $(window).on('load resize', function(){
     if ($(window).width() < 768) {
       $('#product__inner:not(.slick-initialized)').slick({
@@ -86,17 +184,14 @@ $(function () {
   $('.shop-content__select, .product-one__input').styler();
 
 
-  $('.shop-content__filter-btn').on('click', function(){
-    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
-    $(this).addClass('shop-content__filter-btn--active');
-  });
-
   $('.button-list').on('click', function(){
     $('.product-item').addClass('product-item--list');
+    $('.shop-content__inner').addClass('shop-content__nogrid');
   });
 
   $('.button-grid').on('click', function () {
     $('.product-item').removeClass('product-item--list');
+    $('.shop-content__inner').removeClass('shop-content__nogrid');
   });
 
   const popupCall = $("[data-modal]");
@@ -166,7 +261,7 @@ $(function () {
         }
       ]
     });
-  };
+  });
 
   $('.header-content__slider').slick({
     arrows: false,
@@ -220,36 +315,7 @@ $(function () {
   initializeClock('sale__counter', deadline);
 
 
-  $('.form-price__num').ionRangeSlider({
-    type: "double",
-    prefix: "$",
-    onStart: function (data) {
-      $('.form-price__from').val(data.from);
-      $('.form-price__to').val(data.to);
-    },
-    onChange: function (data) {
-      $('.form-price__from').val(data.from);
-      $('.form-price__to').val(data.to);
-    }
-  });
-
-
-  $('.form-price__from, .form-price__to').on('change', function () {
-    var my_range = $(".form-price__num").data("ionRangeSlider");
-    var clas = $(this).attr('class');
-    var val;
-    if (clas == 'form-price__from') {
-      val = $('.form-price__from').val();
-      my_range.update({
-        from: val
-      });
-    } if (clas == 'form-price__to') {
-      val = $('.form-price__to').val();
-      my_range.update({
-        to: val
-      });
-    }
-  });
+  
  
 
 });

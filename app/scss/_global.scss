@@ -94,6 +94,9 @@ body{
   justify-content: center;
   &__list{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 630px;
   }
   &__item{
     color: $title;
