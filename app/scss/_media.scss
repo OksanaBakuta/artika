@@ -78,6 +78,9 @@
     &__inner{
       background-size: 30%;
     }
+    &__title{
+      max-width: 400px;
+    }
   }
   .breadcrumbs{
     &__list{
@@ -254,6 +257,33 @@
       &__title{
         font-size: 20px;
         margin-bottom: 10px;
+      }
+    }
+  }
+  .product-one{
+    padding: 120px 0 25px;
+    &__slider{
+      display: flex;
+      justify-content: center;
+      width: 440px;
+    }
+    .slick-dots{
+      bottom: 0;
+    }
+  }
+  .product-slider{
+    &__small{
+      display: none;
+    }
+    .slick-slide{
+      outline: none;
+    }
+  }
+  .popular-item{
+    &.popular-item--big{
+      .popular-item__img-box{
+        width: 220px;
+        height: 220px;
       }
     }
   }
@@ -478,6 +508,37 @@
     &__btn{
       display: block;
     }
+  }
+  .product-one{
+    &__title{
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 20px;
+    }
+    &__price{
+      font-size: 18px;
+      line-height: 25px;
+      margin-bottom: 20px;
+    }
+    &__descr{
+      font-size: 14px;
+    }
+    &__btn{
+      width: 155px;
+    }
+  }
+  .review{
+    &__input,
+    &__textarea{
+      font-size: 13px;
+      &::placeholder{
+        font-size: 13px;
+      }
+    }
+  }
+  .title{
+    font-size: 35px;
+    margin-bottom: 30px;
   }
 }
 
@@ -740,6 +801,10 @@
     &__inner{
       padding: 60px 0;
     }
+    &__title{
+      font-size: 30px;
+      max-width: 300px;
+    }
   }
   .breadcrumbs{
     &__list{
@@ -759,6 +824,81 @@
     .jq-selectbox{
       &__select{
         padding: 0 30px 0 10px;
+      }
+    }
+  }
+  .product-one{
+    padding: 85px 0 50px;
+    &__inner{
+      flex-direction: column;
+    }
+    &__slider{
+      width: 100%;
+      margin-right: 0;
+    }
+    &__title{
+      text-align: center;
+    }
+  }
+  .product-slider{
+    &__big-item{
+      height: 490px;
+    }
+    .slick-dots button{
+      width: 15px;
+      height: 15px;
+    }
+    &__big{
+      width: 320px;
+    }
+  }
+  .reviews{
+    &__box-img{
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+    &__img{
+      width: 50px;
+      height: 50px;
+    }
+    &__content{
+      max-width: calc(100% - 70px);
+    }
+  }
+  .review-form{
+    &__textarea{
+      padding: 5px 10px;
+    }
+    &__btn-text{
+      font-size: 12px;
+    }
+  }
+  .review{
+    &__btn{
+      height: 40px;
+    }
+    &__textarea,
+    &__form-top{
+      margin-bottom: 25px;
+    }
+    &__input + .review__input{
+      margin-left: 15px;
+    }
+  }
+  .popular{
+    padding: 25px 0;
+  }
+  .popular-item{
+    &.popular-item--big{
+      width: 175px;
+      .popular-item__img-box{
+        width: 175px;
+        height: 175px;
+        margin-bottom: 0;
+      }
+      .popular-item__title{
+        margin-bottom: 10px;
       }
     }
   }
@@ -810,10 +950,6 @@
   .link-btn{
     padding: 8px 22px;
   }
-  .title{
-    font-size: 35px;
-    margin-bottom: 30px;
-  }
   .product-item{
     max-width: 220px;
     height: 395px;
@@ -864,6 +1000,7 @@
     &__title{
       margin-bottom: 5px;
       font-size: 25px;
+      line-height: 35px;
     }
   }
   .breadcrumbs{
@@ -904,6 +1041,143 @@
     }
     &__filter-inner:first-child{
       margin-right: 10px;
+    }
+  }
+  .product-one{
+    padding: 50px 0 25px;
+    &__inner{
+      margin-bottom: 10px;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 35px;
+    }
+    &__price{
+      font-size: 15px;
+      line-height: 20px;
+    }
+    &__descr{
+      font-size: 13px;
+    }
+    &__form{
+      margin-top: 20px;
+    }
+    &__input{
+      height: 40px;
+      width: 120px;
+    }
+    &__btn{
+      height: 42px;
+      width: 120px;
+    }
+    .jq-number{
+      &__spin{
+        height: 40px;
+        width: 40px;
+      }
+      &__field{
+        width: 120px;
+        input{
+          padding: 8px 45px;
+        }
+      } 
+    }
+    &__form-num{
+      margin-bottom: 25px;
+    }  
+    &__tub{
+      width: 140px;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    &__tubs{
+      margin-bottom: 45px;
+    }
+  }
+  .product-slider{
+    &__big-item{
+      height: 300px;
+    }
+    &__big{
+      width: 240px;
+    }
+  }
+  .reviews{
+    &__text{
+      font-size: 12px;
+    }
+    &__item.reviews__item--small{
+      padding-left: 60px;
+    }
+  }
+  .review-form{
+    &__btn-text{
+      font-size: 10px;
+      line-height: 15px;
+    }
+    &__textarea{
+      font-size: 12px;
+      &::placeholder{
+        font-size: 12px;
+      }
+    }
+    &__btn{
+      font-size: 11px;
+      width: 140px;
+      padding: 2px 10px;
+    }
+    &.review-form--small{
+      padding-left: 0;
+    }
+  }
+  .review{
+    &__title{
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &__input,
+    &__textarea{
+      padding: 8px 10px;
+    }
+    &__input{
+      height: 35px;
+    }
+    &__textarea{
+      height: 130px;
+    }
+    &__btn{
+      height: 30px;
+    }
+  }
+  .title{
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .popular{
+    padding: 25px 0 50px;
+    .slick-dots{
+      bottom: -20px;
+      button{
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  .popular-item{
+    min-height: 250px;
+    &.popular-item--big{
+      width: 125px;
+      .popular-item__img-box{
+        width: 125px;
+        height: 125px;
+        margin-bottom: 0;
+      }
+      .popular-item__title{
+        margin-bottom: 10px;
+      }
+      .popular-item__descr{
+        font-size: 12px;
+      }
     }
   }
 }
@@ -1014,10 +1288,11 @@
     }
     &__wrapper,
     &__inner{
-      background-size: 25%;
+      background-image: none !important;
     }
     &__title{
       font-size: 20px;
+      margin-top: 0;
     }
   }
   .shop{
@@ -1094,12 +1369,24 @@
       padding: 5px 10px;
     }
   }
+  .review{
+    &__form-top{
+      flex-direction: column;
+    }
+    &__input+.review__input{
+      margin-left: 0;
+      margin-top: 15px;
+    }
+    &__btn{
+      width: 122px;
+    }
+  }
 }
 
 @media (max-width: 430px){
   body{
     font-size: 12px;
-    line-height: 16px;
+    line-height: 20px;
   }
   .header-content{
     &__slider{
@@ -1129,10 +1416,6 @@
     &__link{
       margin: 0 auto;
     }
-  }
-  .title{
-    font-size: 30px;
-    line-height: 40px;
   }
   .categories{
     padding: 50px 0;
@@ -1191,15 +1474,101 @@
   }
   .shop-content{
     &__inner{
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
     .product-item{
-      height: 360px;
+      height: 335px;
       &__content{
-        height: 190px;
+        height: 225px;
+        padding: 10px;
       }
       &__img-box{
-        height: 160px;
+        height: 100px;
+      }
+      &__title{
+        font-size: 14px;
+        line-height: 20px;
+      }
+      &__text,
+      &__price{
+        font-size: 10px;
+        line-height: 15px;
+      }
+      &__text{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+      &__price{
+        margin-right: 50px;
+        margin-top: 0;
+      }
+      &__search{
+        margin-left: 0;
+        margin-top: auto;
+      }
+      &__btn{
+        margin-top: auto;
+      }
+      &__promo{
+        top: 15px;
+        right: -33px;
+      }
+      &__info{
+        flex-wrap: wrap;
+        height: 85px;
+      }
+    }
+  }
+  .product-one{
+    &__title{
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .reviews{
+    &__box-img{
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    &__img{
+      width: 40px;
+      height: 40px;
+    }
+    &__content{
+      max-width: calc(100% - 50px);
+    }
+    &__item.reviews__item--small{
+      padding-left: 35px;
+    }
+  }
+  .review-form{
+    &__box-btn{
+      flex-direction: column;
+    }
+    &__btn{
+      margin-bottom: 8px;
+    }
+  }
+  .title{
+    font-size: 24px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+  .popular-item{
+    min-height: 220px;
+    &.popular-item--big{
+      width: 100px;
+      .popular-item__img-box{
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0;
+      }
+      .popular-item__descr{
+        font-size: 10px;
       }
     }
   }
