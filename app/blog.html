@@ -11,84 +11,105 @@
 <body>
   <header class="header">
     <div class="header-top">
-      <div class="container">
-        <div class="header-top__inner">
-          <a class="logo" href="#">
-            <img class="logo__img header-top__logo-img" src="images/logo.png" alt="logo">
-          </a>
-          <div class="header-top__text">
-            Интернет магазин быстрозамороженных
-            продуктов в г.Харькове
-          </div>
-          <div class="header-top__leng">
-            <a class="header-top__leng-link" href="#">Укр</a>
-            <a class="header-top__leng-link header-top__leng-link--active" href="#">Рус</a>
-            <a class="header-top__leng-link" href="#">Eng</a>
-          </div>
-          <div class="callback">
-            <a class="callback__link" href="#tel:+380685892525">068-589-25-25</a>
-            <a class="callback__btn-popup" href="#popup" data-modal="#popup">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40pt"
-                height="40pt" viewBox="0 0 40 40" version="1.1">
-                <g>
-                  <path
-                    d="M 38.859375 28.265625 L 30.109375 24.515625 C 29.339844 24.1875 28.449219 24.40625 27.921875 25.054688 L 24.046875 29.789062 C 17.964844 26.921875 13.070312 22.027344 10.203125 15.945312 L 14.9375 12.070312 C 15.585938 11.542969 15.804688 10.652344 15.476562 9.882812 L 11.726562 1.132812 C 11.363281 0.300781 10.460938 -0.152344 9.578125 0.046875 L 1.453125 1.921875 C 0.601562 2.117188 0 2.875 0 3.75 C 0 23.789062 16.242188 40 36.25 40 C 37.125 40 37.882812 39.398438 38.078125 38.546875 L 39.953125 30.421875 C 40.152344 29.535156 39.695312 28.628906 38.859375 28.265625 Z M 38.859375 28.265625 " />
-                </g>
-              </svg>
+      <div class="header-top__wrapper">
+        <div class="container">
+          <div class="header-top__inner">
+            <a class="logo" href="#">
+              <img class="logo__img header-top__logo-img" src="images/logo.png" alt="logo">
             </a>
-          </div>
-          <div class="header-top__account">
-            <form class="search" action="#">
-              <div class="search__input-box">
-                <input class="search__input" type="text">
+            <div class="header-top__text">
+              Интернет магазин быстрозамороженных
+              продуктов
+            </div>
+            <div class="leng">
+              <a class="leng__link" href="#">Укр</a>
+              <a class="leng__link leng__link--active" href="#">Рус</a>
+              <a class="leng__link" href="#">Eng</a>
+            </div>
+            <div class="header-top__info">
+              <div class="callback">
+                <a class="callback__link" href="#tel:+380685892525">068-589-25-25</a>
+                <a class="callback__btn-popup" href="#popup" data-modal="#popup">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40pt"
+                    height="40pt" viewBox="0 0 40 40" version="1.1">
+                    <g>
+                      <path
+                        d="M 38.859375 28.265625 L 30.109375 24.515625 C 29.339844 24.1875 28.449219 24.40625 27.921875 25.054688 L 24.046875 29.789062 C 17.964844 26.921875 13.070312 22.027344 10.203125 15.945312 L 14.9375 12.070312 C 15.585938 11.542969 15.804688 10.652344 15.476562 9.882812 L 11.726562 1.132812 C 11.363281 0.300781 10.460938 -0.152344 9.578125 0.046875 L 1.453125 1.921875 C 0.601562 2.117188 0 2.875 0 3.75 C 0 23.789062 16.242188 40 36.25 40 C 37.125 40 37.882812 39.398438 38.078125 38.546875 L 39.953125 30.421875 C 40.152344 29.535156 39.695312 28.628906 38.859375 28.265625 Z M 38.859375 28.265625 " />
+                    </g>
+                  </svg>
+                </a>
               </div>
-              <button class="search__btn user-btn" type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20.002" viewBox="0 0 15.28 15.281">
-                  <path
-                    d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
-                    transform="translate(-1544.72 -66)" />
-                </svg>
-              </button>
-            </form>
-            <a class="header-top__user user-btn" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                <path
-                  d="M1392.07,57.928a9.923,9.923,0,0,0-3.8-2.383,5.78,5.78,0,1,0-6.54,0A10.018,10.018,0,0,0,1375,65h1.56a8.44,8.44,0,0,1,16.88,0H1395A9.931,9.931,0,0,0,1392.07,57.928Zm-11.29-7.148A4.22,4.22,0,1,1,1385,55,4.222,4.222,0,0,1,1380.78,50.78Z"
-                  transform="translate(-1375 -45)" />
-              </svg>
-            </a>
-            <div class="header-top__cart user-btn">
-              <a class="header-top__cart-link" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
-                  <path
-                    d="M1527.44,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1527.44,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1527.44,61.183Zm1.75-2.806h-12.81a0.823,0.823,0,0,1-.8-0.628l-2.68-11.115h-2.06a0.817,0.817,0,1,1,0-1.634h2.71a0.824,0.824,0,0,1,.8.627l0.74,3.078h16.1a0.818,0.818,0,0,1,.8,1.014l-2,8.038A0.822,0.822,0,0,1,1529.19,58.377Zm-12.16-1.635h11.52l1.59-6.4h-14.65ZM1517.48,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1517.48,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1517.48,61.183Z"
-                    transform="translate(-1510 -45)" />
-                </svg>
-              </a>
-              <span class="header-top__cart-num">2</span>
+              <div class="header-top__account">
+                <form class="search" action="#">
+                  <div class="search__input-box">
+                    <input class="search__input" type="text">
+                  </div>
+                  <button class="search__btn user-btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20.002" viewBox="0 0 15.28 15.281">
+                      <path
+                        d="M1547.7,72.076a0.617,0.617,0,0,1,.75.485,2.583,2.583,0,0,0,.78,1.489,3.036,3.036,0,0,0,1.49.777,0.636,0.636,0,0,1,.49.743,0.649,0.649,0,0,1-.72.515,4.21,4.21,0,0,1-2.14-1.13,4.164,4.164,0,0,1-1.13-2.136A0.6,0.6,0,0,1,1547.7,72.076ZM1550.98,66a6.267,6.267,0,0,1,6.28,6.257,6.136,6.136,0,0,1-.57,2.6l2.34,2.036c1.7,1.746.74,3.266,0.29,3.717-0.42.454-1.99,1.414-3.73-.292l-2.06-2.35A6.261,6.261,0,1,1,1550.98,66Zm5.55,13.517a1.352,1.352,0,0,0,1.88.226,1.313,1.313,0,0,0-.23-1.874l-2.16-1.88a6.236,6.236,0,0,1-1.37,1.34Zm-5.55-2.312a4.948,4.948,0,1,0-4.97-4.948A4.963,4.963,0,0,0,1550.98,77.2Z"
+                        transform="translate(-1544.72 -66)" />
+                    </svg>
+                  </button>
+                </form>
+                <a class="header-top__user user-btn" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <path
+                      d="M1392.07,57.928a9.923,9.923,0,0,0-3.8-2.383,5.78,5.78,0,1,0-6.54,0A10.018,10.018,0,0,0,1375,65h1.56a8.44,8.44,0,0,1,16.88,0H1395A9.931,9.931,0,0,0,1392.07,57.928Zm-11.29-7.148A4.22,4.22,0,1,1,1385,55,4.222,4.222,0,0,1,1380.78,50.78Z"
+                      transform="translate(-1375 -45)" />
+                  </svg>
+                </a>
+                <div class="header-top__cart user-btn">
+                  <a class="header-top__cart-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20">
+                      <path
+                        d="M1527.44,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1527.44,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1527.44,61.183Zm1.75-2.806h-12.81a0.823,0.823,0,0,1-.8-0.628l-2.68-11.115h-2.06a0.817,0.817,0,1,1,0-1.634h2.71a0.824,0.824,0,0,1,.8.627l0.74,3.078h16.1a0.818,0.818,0,0,1,.8,1.014l-2,8.038A0.822,0.822,0,0,1,1529.19,58.377Zm-12.16-1.635h11.52l1.59-6.4h-14.65ZM1517.48,65a2.724,2.724,0,1,1,2.74-2.724A2.738,2.738,0,0,1,1517.48,65Zm0-3.814a1.09,1.09,0,1,0,1.09,1.09A1.094,1.094,0,0,0,1517.48,61.183Z"
+                        transform="translate(-1510 -45)" />
+                    </svg>
+                  </a>
+                  <span class="header-top__cart-num">2</span>
+                </div>
+              </div>
+              <div class="btn-menu">
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-box">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Каталог</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">О нас</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Оплата и доставка</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Кулинарная книга</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="menu-box__bottom">
+            <div class="menu-box__user">
+              <a class="menu-box__link" href="#">Вход</a>
+              <span> / </span>
+              <a class="menu-box__link" href="#">Регистрация</a>
+            </div>
+            <div class="leng">
+              <a class="leng__link" href="#">Укр</a>
+              <a class="leng__link leng__link--active" href="#">Рус</a>
+              <a class="leng__link" href="#">Eng</a>
             </div>
           </div>
         </div>
       </div>
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Каталог</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">О нас</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Оплата и доставка</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Кулинарная книга</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
     </div>
     <div class="popup" id="popup">
       <div class="popup__body">
@@ -98,7 +119,7 @@
           <form action="" class="popup__form">
             <input class="popup__input" type="text" placeholder="Ваше имя">
             <input class="popup__input popup__input--tel" type="tel" placeholder="Номер телефона">
-            <button class="popup__btn" type="submit">Позвонить мне</button>
+            <button class="popup__btn btn" type="submit">Позвонить мне</button>
           </form>
         </div>
       </div>
@@ -109,8 +130,8 @@
 
     <section class="top">
       <div class="container top__container">
-        <div class="top__wrapper" style="background-image: url('../images/blog/bg-left.png');">
-          <div class="top__inner"  style="background-image: url('../images/blog/bg-right.png')">
+        <div class="top__wrapper" style="background-image: url('../images/bg-blog-left.png');">
+          <div class="top__inner" style="background-image: url('../images/bg-blog-right.png')">
             <h5 class="title top__title">Кулинарная книга</h5>
             <div class="breadcrumbs">
               <ul class="breadcrumbs__list">
@@ -211,21 +232,21 @@
             <div class="pagination">
               <a class="pagination__prev pagination__arrow" href="#">
                 << </a>
-              <ul class="pagination__list">
-                <li class="pagination__item pagination__item--active">
-                  <a class="pagination__link" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">3</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">4</a>
-                </li>
-              </ul>
-              <a class="pagination__next pagination__arrow" href="#"> >> </a>
+                  <ul class="pagination__list">
+                    <li class="pagination__item pagination__item--active">
+                      <a class="pagination__link" href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">3</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a class="pagination__link" href="#">4</a>
+                    </li>
+                  </ul>
+                  <a class="pagination__next pagination__arrow" href="#"> >> </a>
             </div>
           </div>
           <div class="blog__categories">
@@ -241,7 +262,7 @@
                 </svg>
               </button>
             </form>
-            <div class="title-filters">Категории</div>
+            <div class="title-filters blog__title">Категории</div>
             <form class="filter" action="#">
               <label class="filter__label">
                 <input class="filter__input checkbox" type="checkbox">
@@ -282,7 +303,7 @@
   <footer class="footer">
     <div class="container-small">
       <div class="footer__items">
-        <div class="footer__item">
+        <div class="footer__item footer__info">
           <a class="logo" href="#">
             <img class="logo__img footer__logo-img" src="images/logo.png" alt="logo">
           </a>
@@ -303,7 +324,7 @@
             </a>
           </div>
         </div>
-        <div class="footer__item">
+        <div class="footer__item footer__menu">
           <div class="footer__title">Меню</div>
           <ul class="footer__list">
             <li class="footer__list-item">
@@ -323,7 +344,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__item">
+        <div class="footer__item footer__user">
           <div class="footer__title">Аккаунт</div>
           <ul class="footer__list">
             <li class="footer__list-item">
@@ -340,7 +361,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer__item">
+        <div class="footer__item footer__social">
           <div class="footer__title">Соцсети</div>
           <p class="footer__text">
             Подписывайтесь на наши соцсети и узнавайте о всех акциях первыми.

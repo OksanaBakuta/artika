@@ -1,5 +1,10 @@
 $(function () {
 
+  $('.blog__title').on('click', function(){
+    $('.blog .filter').slideToggle();
+    $(this).toggleClass('blog__title--active');
+  });
+ 
   const body = $('body');
   const lockPadding = $('.lock-padding');
 
