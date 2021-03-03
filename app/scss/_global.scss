@@ -147,3 +147,15 @@ body{
     background-color: $sale;
   }
 }
+
+.input-num{
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+}
