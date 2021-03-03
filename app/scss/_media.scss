@@ -228,6 +228,9 @@
     &__inner{
       padding: 55px 0;
     }
+    &__title{
+      margin: 0 auto 15px;
+    }
   }
   .breadcrumbs{
     &__list{
@@ -297,6 +300,9 @@
       }
     }
   }
+  .register-login{
+    padding: 90px 0;
+  }
 }
 
 @media (max-width: 900px){
@@ -304,6 +310,10 @@
     &__text{
       max-width: 150px;
     }
+  }
+  .title{
+    font-size: 35px;
+    margin-bottom: 30px;
   }
   .leng{
       display: flex;
@@ -383,7 +393,7 @@
       padding: 50px 0;
     }
     &__title{
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
   .no-scroll{
@@ -546,13 +556,25 @@
       }
     }
   }
-  .title{
-    font-size: 35px;
-    margin-bottom: 30px;
-  }
   .blog-item{
     &__img-link{
       height: 290px;
+    }
+  }
+  .register-login{
+    padding: 70px 0;
+    &__input,
+    &__btn{
+      height: 45px;
+      padding: 0 15px;
+    }
+    &__label-btn{
+      width: 25px;
+      height: 25px;
+      top: 47px;
+    }
+    &__img{
+      height: 17px;
     }
   }
 }
@@ -943,6 +965,24 @@
     }
     &__item:last-child{
       margin-bottom: 0;
+    }
+  }
+  .register-login{
+    padding: 50px 0;
+    &__buttons{
+      margin-bottom: 35px;
+    }
+    &__tub{
+      font-size: 20px;
+    }
+    &__tub + .register-login__tub{
+      margin-left: 40px;
+    }
+    &__input{
+      margin-bottom: 15px;
+    }
+    &__label-btn{
+      top: 40px;
     }
   }
 }
@@ -1426,6 +1466,38 @@
       padding: 20px;
     }
   }
+  .register-login{
+    padding: 25px 0;
+    &__buttons{
+      margin-bottom: 20px;
+    }
+    &__tub{
+      font-size: 16px;
+    }
+    &__text,
+    &__btn,
+    &__input{
+      font-size: 12px;
+    }
+    &__input{
+      height: 35px;
+      padding: 0 10px;
+      margin-top: 3px;
+      margin-bottom: 10px;
+    }
+    &__btn{
+      height: 35px;
+    }
+    &__label-btn{
+      width: 20px;
+      height: 20px;
+      top: 30px;
+      right: 10px;
+    }
+    &__img{
+      height: 15px;
+    }
+  }
 }
 
 @media (min-width: 430px){
@@ -1512,12 +1584,17 @@
       height: 110px;
     }
   }
+  .title{
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
   .top{
     &__inner{
       padding: 20px 0;
     }
     &__title{
-      font-size: 18px;
+      margin-bottom: 10px;
     }
   }
   .breadcrumbs{
@@ -1605,11 +1682,6 @@
     &__btn{
       margin-bottom: 8px;
     }
-  }
-  .title{
-    font-size: 24px;
-    line-height: 35px;
-    margin-bottom: 20px;
   }
   .popular-item{
     min-height: 220px;

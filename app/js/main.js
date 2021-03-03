@@ -1,9 +1,50 @@
 $(function () {
 
+
+  $('.register-login__label-btn').on('click', function(e){
+    e.preventDefault();
+    $(this).removeClass('register-login__label-btn--active')
+    $(this).siblings('.register-login__label-btn').addClass('register-login__label-btn--active');
+
+    var btnOpen = $(this).attr('id');
+    if (btnOpen == "register-login__open") {
+      $(this).siblings('.register-login__input').attr("type", "password");
+    }else{
+      $(this).siblings('.register-login__input').attr("type", "text");
+    }
+
+  });
+
+  $('.register-login__tub').on('click', function(e){
+    e.preventDefault();
+
+    $('.register-login__tub').removeClass('register-login__tub--active');
+    $(this).addClass('register-login__tub--active');
+
+    $('.register-login__form').removeClass('register-login__form--active');
+    $($(this).attr('href')).addClass('register-login__form--active');
+
+    var thisId = $(this).attr('id');
+    if (thisId == 'login-btn') {
+      $('.top__title').text('ВХОД');
+      $('.breadcrumbs__item:last-child .breadcrumbs__link').text('Вход');
+    }else{
+      $('.top__title').text('РЕГИСТРАЦИЯ');
+      $('.breadcrumbs__item:last-child .breadcrumbs__link').text('Регистрация');
+    }
+
+  });
+
   $('.blog__title').on('click', function(){
     $('.blog .filter').slideToggle();
     $(this).toggleClass('blog__title--active');
   });
+
+  var hh = $('.header').outerHeight();
+  var fh = $('.footer').outerHeight();
+  var mh = $(window).outerHeight() - hh - fh;
+
+  $('.main').css('min-height', mh);
  
   const body = $('body');
   const lockPadding = $('.lock-padding');
