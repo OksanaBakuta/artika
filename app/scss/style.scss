@@ -1199,7 +1199,23 @@
     }
   }
   &__arrow{
-    padding: 7px 20px;
+    height: 42px;
+    width: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg{
+      height: 20px;
+    }
+    path{
+      fill: $accent;
+      transition: all .3s;
+    }
+    &:hover{
+      path{
+        fill: #fff;
+      }
+    }
   }
   &__prev{
     margin-right: 15px;
@@ -1756,7 +1772,7 @@
     @extend %roboto-700;
     color: $accent;
   }
-  &__tub + .register-login__tub{
+  &__title + .register-login__title{
     margin-left: 55px;
   }
   &__form{

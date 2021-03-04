@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>Arktika</title>
+  <title>Ice-Dream</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
           <div class="header-top__inner">
             <a class="logo" href="#">
-              <img class="logo__img header-top__logo-img" src="images/logo.png" alt="logo">
+              <img class="logo__img header-top__logo-img" src="images/icons/logo.svg" alt="logo">
             </a>
             <div class="header-top__text">
               Интернет магазин быстрозамороженных
@@ -111,19 +111,19 @@
         </div>
       </div>
     </div>
-    <div class="popup" id="popup">
-      <div class="popup__body">
-        <div class="popup__content">
-          <a class="popup__close" href="#" data-close="">X</a>
-          <div class="popup__title">Мы Вам перезвоним:</div>
-          <form action="" class="popup__form">
-            <input class="popup__input" type="text" placeholder="Ваше имя">
-            <input class="popup__input popup__input--tel" type="tel" placeholder="Номер телефона">
-            <button class="popup__btn btn" type="submit">Позвонить мне</button>
-          </form>
-        </div>
+  <div class="popup" id="popup">
+    <div class="popup__body">
+      <div class="popup__content">
+        <a class="popup__close" href="#" data-close="">X</a>
+        <div class="popup__title">Мы Вам перезвоним:</div>
+        <form class="popup__form" action="#">
+          <input class="popup__input" type="text" placeholder="Ваше имя">
+          <input class="popup__input popup__input--tel" type="tel" placeholder="Номер телефона">
+          <button class="popup__btn btn" type="submit">Позвонить мне</button>
+        </form>
       </div>
     </div>
+  </div>
   </header>
 
 
@@ -213,7 +213,7 @@
       <div class="footer__items">
         <div class="footer__item footer__info">
           <a class="logo" href="#">
-            <img class="logo__img footer__logo-img" src="images/logo.png" alt="logo">
+            <img class="logo__img footer__logo-img" src="images/icons/logo.svg" alt="logo">
           </a>
           <p class="footer__addres">
             г.Харьков, ул. Мироносицкая, 55
@@ -288,7 +288,7 @@
                     d="M30.9101 6.74219L26.2305 28.5313C25.8789 30.0703 24.9609 30.4531 23.6523 29.7305L16.5234 24.5391L13.0859 27.8086C12.7031 28.1836 12.3867 28.5 11.6523 28.5L12.164 21.3281L25.375 9.53516C25.9492 9.03125 25.25 8.75 24.4805 9.25781L8.15233 19.4141L1.12108 17.2422C-0.410172 16.7695 -0.437516 15.7305 1.43748 15.0039L28.9375 4.53906C30.2109 4.06641 31.3242 4.82031 30.9101 6.74219Z" />
                 </g>
                 <defs>
-                  <clipPath id="clip0">
+                  <clipPath>
                     <rect width="31" height="35" fill="white" />
                   </clipPath>
                 </defs>
@@ -301,7 +301,7 @@
                     d="M15.5078 9.64062C11.1055 9.64062 7.55469 13.1445 7.55469 17.4922C7.55469 21.8398 11.1055 25.3477 15.5078 25.3477C19.9062 25.3477 23.457 21.8398 23.457 17.4922C23.457 13.1445 19.9062 9.64062 15.5078 9.64062ZM15.5078 22.6016C12.6641 22.6016 10.3398 20.3086 10.3398 17.4922C10.3398 14.6758 12.6562 12.3867 15.5078 12.3867C18.3594 12.3867 20.6758 14.6758 20.6758 17.4922C20.6758 20.3086 18.3516 22.6016 15.5078 22.6016ZM25.6367 9.31641C25.6367 10.3359 24.8086 11.1484 23.7812 11.1484C22.75 11.1484 21.9297 10.3281 21.9297 9.31641C21.9297 8.30469 22.7578 7.48438 23.7812 7.48438C24.8086 7.48438 25.6367 8.30469 25.6367 9.31641ZM30.9023 11.1758C30.7852 8.72266 30.2188 6.54688 28.3984 4.75781C26.5859 2.96484 24.3867 2.40625 21.9023 2.28125C19.3398 2.14062 11.668 2.14062 9.10547 2.28125C6.62891 2.39844 4.42969 2.96094 2.60938 4.75C0.789062 6.54297 0.226562 8.71484 0.105469 11.1719C-0.0429688 13.6992 -0.0429688 21.2812 0.105469 23.8086C0.222656 26.2656 0.789062 28.4375 2.60938 30.2305C4.42969 32.0195 6.62109 32.5781 9.10547 32.7031C11.668 32.8477 19.3398 32.8477 21.9023 32.7031C24.3867 32.5859 26.5859 32.0273 28.3984 30.2305C30.2109 28.4375 30.7773 26.2656 30.9023 23.8086C31.0469 21.2812 31.0469 13.707 30.9023 11.1758ZM27.5938 26.5234C27.0547 27.8633 26.0117 28.8945 24.6484 29.4375C22.6055 30.2344 17.7617 30.0508 15.5078 30.0508C13.25 30.0508 8.40234 30.2305 6.36719 29.4375C5.01172 28.9023 3.96484 27.8711 3.41797 26.5234C2.60938 24.5078 2.79688 19.7227 2.79688 17.4922C2.79688 15.2656 2.61719 10.4727 3.41797 8.46094C3.95703 7.125 5.00391 6.08984 6.36719 5.55078C8.40625 4.75 13.25 4.9375 15.5078 4.9375C17.7617 4.9375 22.6133 4.75781 24.6484 5.55078C26.0039 6.08594 27.0508 7.11719 27.5938 8.46094C28.4062 10.4805 28.2188 15.2656 28.2188 17.4922C28.2188 19.7227 28.4062 24.5156 27.5938 26.5234Z" />
                 </g>
                 <defs>
-                  <clipPath id="clip0">
+                  <clipPath>
                     <rect width="31" height="35" fill="white" />
                   </clipPath>
                 </defs>

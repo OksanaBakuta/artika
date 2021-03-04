@@ -9,7 +9,12 @@ $(function () {
     var btnOpen = $(this).attr('id');
     if (btnOpen == "register-login__open") {
       $(this).siblings('.register-login__input').attr("type", "password");
-    }else{
+    } else if (btnOpen == "register-login__open-1"){
+      $(this).siblings('.register-login__input').attr("type", "password");
+    } else if (btnOpen == "register-login__open-2") {
+      $(this).siblings('.register-login__input').attr("type", "password");
+    }
+    else{
       $(this).siblings('.register-login__input').attr("type", "text");
     }
 
