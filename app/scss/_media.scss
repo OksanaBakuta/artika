@@ -303,6 +303,21 @@
   .register-login{
     padding: 90px 0;
   }
+  .contacts{
+    &__review{
+      padding: 30px;
+      width: 50%;
+    }
+    &__form-top{
+      flex-direction: column;
+    }
+    &__input + .contacts__input{
+      margin-left: 0;
+    }
+    &__btn{
+      height: 45px;
+    }
+  }
 }
 
 @media (max-width: 900px){
@@ -575,6 +590,18 @@
     }
     &__img{
       height: 17px;
+    }
+  }
+  .contacts{
+    padding: 80px 0;
+    &__item{
+      display: block;
+    }
+    &__img-box{
+      margin-bottom: 15px;
+    }
+    &__review{
+      width: 60%;
     }
   }
 }
@@ -983,6 +1010,74 @@
     }
     &__label-btn{
       top: 40px;
+    }
+  }
+  .contacts{
+    padding: 50px 0;
+    &__inner{
+      display: block;
+    }
+    &__content{
+      margin-bottom: 20px;
+    }
+    &__item{
+      display: flex;
+    }
+    &__item + .contacts__item{
+      margin-top: 30px;
+    }
+    &__img-box{
+      margin-bottom: 0;
+      width: 50px;
+      height: 50px;
+    }
+    &__title{
+      margin-bottom: 5px;
+    }
+    &__subtitle{
+      margin-bottom: 20px;
+    }
+    &__review{
+      padding: 0;
+      box-shadow: none;
+      width: 100%;
+    }
+    &__form-top{
+      flex-direction: row;
+    }
+    &__input + .contacts__input{
+      margin-left: 10px;
+    }
+    &__input{
+      height: 45px;
+    }
+    &__input,
+    &__textarea{
+      padding: 10px;
+      margin-bottom: 20px;
+      &::placeholder{
+        font-size: 12px;
+      }
+    }
+    &__textarea{
+      height: 110px;
+    }
+    &__btn{
+      height: 35px;
+      padding: 0 10px;
+      font-size: 12px;
+    }
+    &__title{
+      font-size: 28px;
+    }
+    &__map{
+      height: 250px;
+      iframe{
+        height: 250px;
+      }
+    }
+    &__subtitle{
+      font-size: 18px;
     }
   }
 }
@@ -1759,6 +1854,48 @@
     }
     .slick-next{
       right: 15px;
+    }
+  }
+  .contacts{
+    &__title{
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    &__subtitle{
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 15px;
+    }
+    &__img-box{
+      width: 40px;
+      height: 40px;
+    }
+    &__item + .contacts__item{
+      margin-top: 15px;
+    }
+    &__form-top{
+      display: block;
+    }
+    &__input + .contacts__input{
+      margin-left: 0;
+    }
+    &__input{
+      height: 35px;
+    }
+    &__input,
+    &__textarea{
+      font-size: 10px;
+      line-height: 16px;
+      margin-bottom: 15px;
+    }
+    &__textarea{
+      height: 95px;
+    }
+    &__btn{
+      height: 30px;
+      width: 140px;
+      font-size: 10px;
     }
   }
 }

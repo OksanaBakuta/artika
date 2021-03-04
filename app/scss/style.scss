@@ -1868,17 +1868,20 @@
     color: #292929;
     display: flex;
     flex-direction: column;
-    max-width: 285px;
+    max-width: 270px;
+    width: 100%;
   }
   &__link{
     color: inherit;
-    margin-bottom: 5px;
+  }
+  &__link + .contacts__link{
+    margin-top: 5px;
   }
   &__review{
     box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
     background-color: #fff;
-    max-width: 775px;
-    width: 100%;
+    max-width: 700px;
+    width: 60%;
     padding: 55px 40px;
   }
   &__review-title{
@@ -1924,6 +1927,7 @@
   }
   &__map{
     width: 100%;
+    overflow: hidden;
     iframe{
       width: 100%;
       height: 450px;
